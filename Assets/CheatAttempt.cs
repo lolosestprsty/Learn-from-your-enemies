@@ -4,13 +4,12 @@ using UnityEngine.UI;
 
 public class CheatAttempt : MonoBehaviour
 {
+    public PaperSlider paperSlider;
     public TeacherAI teacher;
     public float cheatTime = 1.5f;
     
     [Header("UI Elements")]
     public GameObject examPaperPanel;
-    public TextMeshProUGUI questionText;
-    public TextMeshProUGUI[] answerTexts;
     public Slider progressBar;
 
     private bool isCheating = false;
@@ -22,14 +21,13 @@ public class CheatAttempt : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(paperSlider.isPulledUp)
         {
             if (!teacher.IsFacingPlayer && !isCheating)
             {
                 StartCheating();
             }
         }
-
         // Only progress the cheat if we're not paused.
         if (isCheating && !isPaused)
         {

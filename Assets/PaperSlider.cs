@@ -19,7 +19,7 @@ public class PaperSlider : MonoBehaviour
     private float lerpTimer = 0f;
     private bool slidingUp = false;
     private bool slidingDown = false;
-    private bool isPulledUp = false;    // Indicates if the paper is fully up.
+    public bool isPulledUp = false;    // Indicates if the paper is fully up.
 
     private void Update()
     {
