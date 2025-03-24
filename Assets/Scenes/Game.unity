@@ -660,6 +660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1038994056}
   - component: {fileID: 1038994055}
+  - component: {fileID: 1038994057}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -680,7 +681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teacher: {fileID: 1492616476}
-  cheatTime: 1.5
+  cheatTime: 3
   examPaperPanel: {fileID: 1093480980}
   questionText: {fileID: 1372590924}
   answerTexts: []
@@ -700,6 +701,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1038994057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038994054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08324997636b9d842bbf961bc0e6c5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teacher: {fileID: 1492616476}
+  cheatAttempt: {fileID: 1038994055}
+  paperRect: {fileID: 1093480981}
+  onScreenPosition: {x: 0, y: 0}
+  offScreenPosition: {x: 0, y: -520}
+  slideUpDuration: 0.75
+  slideDownSpeed: 2000
 --- !u!1 &1093480980
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,8 +762,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -515.5}
+  m_SizeDelta: {x: 0, y: 9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1093480982
 MonoBehaviour:
